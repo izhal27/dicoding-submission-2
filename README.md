@@ -3,7 +3,7 @@
 
 ___
 
-### Submission : Aplikasi Github User
+### Submission : Aplikasi Github User (UI/UX dan API)
 
 #### Kriteria Submission
 
