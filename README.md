@@ -25,7 +25,3 @@ Fitur yang harus ada pada aplikasi:
     - Menggunakan TabLayout, BottomNavigationView, atau yang lainnya sebagai navigasi antara halaman List Follower dan List Following.
 
 **3. Terdapat indikator loading saat aplikasi memuat data.**
-
----
-
-### [Submission 1](https://github.com/izhal27/dicoding-submission-1)
