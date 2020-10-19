@@ -40,12 +40,7 @@ class UserAdapter() : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
 
   inner class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun bind(user: User) {
-      Glide.with(itemView.context)
-        .load(user.avatar_url)
-        .apply(RequestOptions().override(500, 500))
-        .centerCrop()
-        .into(itemView.imgAvatarDetail)
-
+      itemView.imgAvatarDetail.loadImage(user.avatar_url)
       val detailClickListener = View.OnClickListener {
         val intent = Intent(itemView.context, DetailUserActivity::class.java)
         intent.putExtra(EXTRA_LOGIN, user.login)

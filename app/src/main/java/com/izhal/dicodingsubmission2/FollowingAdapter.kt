@@ -31,12 +31,7 @@ class FollowingAdapter : RecyclerView.Adapter<FollowingAdapter.FollowingViewHold
 
   inner class FollowingViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun bind(user: User) {
-      Glide.with(itemView.context)
-        .load(user.avatar_url)
-        .apply(RequestOptions().override(500, 500))
-        .centerCrop()
-        .into(itemView.imgFollower)
-
+      itemView.imgFollower.loadImage(user.avatar_url)
       itemView.txtName.text = user.login
       itemView.setOnClickListener {
         val intent = Intent(itemView.context, WebViewActivity::class.java)

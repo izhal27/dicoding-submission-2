@@ -32,13 +32,9 @@ class DetailUserActivity : AppCompatActivity() {
       ViewModelProvider.NewInstanceFactory()
     ).get(DetailUserViewModel::class.java)
     login?.let { detailUserViewModel.setLogin(it) }
-    detailUserViewModel.getUserDetail().observe(this, Observer { userDetail ->
+    detailUserViewModel.getUserDetail().observe(this, { userDetail ->
       if (userDetail != null) {
-        Glide.with(applicationContext)
-          .load(userDetail.avatar_url)
-          .apply(RequestOptions().override(500, 500))
-          .centerCrop()
-          .into(imgAvatarDetail)
+        imgAvatarDetail.loadImage(userDetail.avatar_url)
 
         txtName.text = userDetail.name
         txtUsername.text = userDetail.login
